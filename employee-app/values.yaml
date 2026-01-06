@@ -1,0 +1,16 @@
+namespace: vk67220-ns
+
+postgres:
+  image: postgres:13
+  db: employees
+  storageClass: vk67220-storage-duplicate
+  storageSize: 2Gi
+
+employeeApp:
+  image: prasad5806/springboot-postgresql-hibernate-crud-example-app:latest
+  replicas: 3
+
+secrets:
+  username: postgres
+  password: root
+
