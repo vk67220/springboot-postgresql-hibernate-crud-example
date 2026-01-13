@@ -1,0 +1,17 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1  
+kind: RoleBinding
+metadata:
+  name: emp-app-rolebinding
+  namespace: vk67220-ns
+subjects:
+  - kind: ServiceAccount
+    name: emp-app-sa
+    namespace: vk67220-ns
+roleRef:
+  kind: Role
+  name: emp-app-role
+  apiGroup: rbac.authorization.k8s.io
+---
+
+

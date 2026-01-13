@@ -1,0 +1,14 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: vk67220-cluster-readonly
+rules:
+- apiGroups: [""]
+  resources:
+    - nodes
+    - namespaces
+    - persistentvolumes
+    - pods
+  verbs: ["get", "list", "watch"]
+---
